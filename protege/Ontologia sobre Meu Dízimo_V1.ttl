@@ -183,7 +183,8 @@
 :Resource rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:participatedIn;
-  owl:someValuesFrom :ResourceUtilization
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :ResourceUtilization
 ].
 :ResourceUtilization rdfs:subClassOf [
   rdf:type owl:Restriction;
@@ -263,16 +264,4 @@
   owl:onProperty gufo:inheresIn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :User
-].
-:Avaliation rdfs:subClassOf [
-  rdf:type owl:Restriction;
-  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
-  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :Rating
-].
-:Rating rdfs:subClassOf [
-  rdf:type owl:Restriction;
-  owl:onProperty gufo:inheresIn;
-  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :Avaliation
 ].
