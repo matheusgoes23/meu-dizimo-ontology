@@ -71,8 +71,14 @@
     rdfs:subClassOf gufo:Quality;
     rdfs:label "Value"@en.
 :Role rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
-    rdfs:subClassOf gufo:Quality;
+    rdfs:subClassOf gufo:IntrinsicMode;
     rdfs:label "Role"@en.
+:LeaderRole rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "LeaderRole"@en.
+:SecretaryRole rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "SecretaryRole"@en.
+:MemberRole rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "MemberRole"@en.
 :Member rdfs:subClassOf :User.
 :Leader rdfs:subClassOf :User.
 :Secretary rdfs:subClassOf :User.
@@ -82,6 +88,9 @@
 :MemberRecommendation rdfs:subClassOf :EntryMethod.
 :Campaign rdfs:subClassOf :EntryMethod.
 :Other rdfs:subClassOf :EntryMethod.
+:LeaderRole rdfs:subClassOf :Role.
+:SecretaryRole rdfs:subClassOf :Role.
+:MemberRole rdfs:subClassOf :Role.
 :usedBy rdf:type owl:ObjectProperty;
     rdfs:domain :Resource;
     rdfs:range :User;

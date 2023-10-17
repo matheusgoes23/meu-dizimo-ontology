@@ -14,6 +14,15 @@
     <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="http://meudizimo.com#LeaderRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://meudizimo.com#MemberRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://meudizimo.com#SecretaryRole"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Avaliation"/>
     </Declaration>
     <Declaration>
@@ -119,6 +128,54 @@
         <Class abbreviatedIRI="gufo:Relator"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#avaliatedBy"/>
     </Declaration>
     <Declaration>
@@ -132,9 +189,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCreationDatetime"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasDatetime"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEmail"/>
@@ -183,15 +237,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#utilizesResource"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Avaliation1"/>
@@ -296,9 +341,6 @@
         <NamedIndividual IRI="#11111111111"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#20.0"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
     </Declaration>
     <Declaration>
@@ -351,12 +393,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#84977777777"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#88888888888"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#99999999999"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#leader1@meudizimo.com"/>
@@ -499,14 +535,6 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Role"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Leader"/>
-            <NamedIndividual IRI="#Member"/>
-            <NamedIndividual IRI="#Secretary"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Secretary"/>
         <ObjectIntersectionOf>
             <Class IRI="#User"/>
@@ -536,6 +564,18 @@
             </ObjectHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://meudizimo.com#LeaderRole"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://meudizimo.com#MemberRole"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://meudizimo.com#SecretaryRole"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Avaliation"/>
         <Class abbreviatedIRI="gufo:Relator"/>
@@ -568,7 +608,7 @@
     <SubClassOf>
         <Class IRI="#CPF"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
             <Class IRI="#User"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -586,29 +626,23 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChurchNotification"/>
-        <ObjectSomeValuesFrom>
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
-            </ObjectInverseOf>
-            <Class IRI="#User"/>
-        </ObjectSomeValuesFrom>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
+            <Class IRI="#Church"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChurchNotification"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
             <Class IRI="#Datetime"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChurchNotification"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
-            </ObjectInverseOf>
-            <Class IRI="#Church"/>
+            <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
+            <Class IRI="#User"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -618,7 +652,7 @@
     <SubClassOf>
         <Class IRI="#CreationDatetime"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
             <Class IRI="#User"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -628,10 +662,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Datetime"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            <Class IRI="#User"/>
-        </ObjectMinCardinality>
+        <ObjectUnionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
+                <Class IRI="#ChurchNotification"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
+                <Class IRI="#ResourceUtilization"/>
+            </ObjectMinCardinality>
+        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Email"/>
@@ -640,7 +680,7 @@
     <SubClassOf>
         <Class IRI="#Email"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
             <Class IRI="#User"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -651,7 +691,7 @@
     <SubClassOf>
         <Class IRI="#EntryMethod"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="#hasEntryMethod"/>
             <Class IRI="#User"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -673,10 +713,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Phone"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
             <Class IRI="#User"/>
-        </ObjectExactCardinality>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rating"/>
@@ -685,7 +725,7 @@
     <SubClassOf>
         <Class IRI="#Rating"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="#isAvaliatedBy"/>
             <Class IRI="#Resource"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -717,18 +757,14 @@
     <SubClassOf>
         <Class IRI="#Resource"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#hasUtilizationQuantity"/>
             <Class IRI="#UtilizationQuantity"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Resource"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#hasValue"/>
             <Class IRI="#Value"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -738,39 +774,33 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ResourceUtilization"/>
-        <ObjectSomeValuesFrom>
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
-            </ObjectInverseOf>
-            <Class IRI="#User"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ResourceUtilization"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
             <Class IRI="#Datetime"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ResourceUtilization"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#isResourceUtilizationOf"/>
+            <Class IRI="#User"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResourceUtilization"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#utilizesResource"/>
             <Class IRI="#Resource"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Role"/>
-        <Class abbreviatedIRI="gufo:Quality"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Role"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="#hasRole"/>
             <Class IRI="#User"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -802,36 +832,28 @@
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#hasCPF"/>
             <Class IRI="#CPF"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#hasCreationDatetime"/>
             <Class IRI="#CreationDatetime"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#hasEmail"/>
             <Class IRI="#Email"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectInverseOf>
-                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
-            </ObjectInverseOf>
+            <ObjectProperty IRI="#hasPhone"/>
             <Class IRI="#Phone"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -842,7 +864,7 @@
     <SubClassOf>
         <Class IRI="#UtilizationQuantity"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
             <Class IRI="#Resource"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -853,7 +875,7 @@
     <SubClassOf>
         <Class IRI="#Value"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
             <Class IRI="#Resource"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -1007,10 +1029,6 @@
         <NamedIndividual IRI="#11111111111"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Value"/>
-        <NamedIndividual IRI="#20.0"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#CreationDatetime"/>
         <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
     </ClassAssertion>
@@ -1081,14 +1099,6 @@
     <ClassAssertion>
         <Class IRI="#Phone"/>
         <NamedIndividual IRI="#84977777777"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#88888888888"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#99999999999"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Email"/>
@@ -1601,7 +1611,7 @@
         <NamedIndividual IRI="#Igreja_X"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
         <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization1"/>
         <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
     </ObjectPropertyAssertion>
@@ -1616,7 +1626,7 @@
         <NamedIndividual IRI="#Resource1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
         <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization2"/>
         <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
     </ObjectPropertyAssertion>
@@ -1631,7 +1641,7 @@
         <NamedIndividual IRI="#Resource2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
         <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization3"/>
         <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
     </ObjectPropertyAssertion>
@@ -1646,7 +1656,7 @@
         <NamedIndividual IRI="#Resource2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
         <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization4"/>
         <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
     </ObjectPropertyAssertion>
@@ -1661,7 +1671,7 @@
         <NamedIndividual IRI="#Resource3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
         <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization5"/>
         <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
     </ObjectPropertyAssertion>
@@ -1676,7 +1686,7 @@
         <NamedIndividual IRI="#Resource3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl/ResourceUtilization#ResourceUtilization6"/>
         <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
     </ObjectPropertyAssertion>
@@ -1691,15 +1701,87 @@
         <NamedIndividual IRI="#Resource3"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#avaliatedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAvaliation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAvaliationRating"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCPF"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCreationDatetime"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasDatetime"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1719,6 +1801,14 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasResourceUtilization"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRole"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasUtilizationQuantity"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1726,6 +1816,82 @@
         <ObjectProperty IRI="#hasValue"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAffiliate"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAvaliateA"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAvaliationOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isResourceUtilizationOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#resourceUtilizatedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#usedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#utilizesResource"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
+        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
+        <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
+        <ObjectProperty IRI="#hasCPF"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
+        <ObjectProperty IRI="#hasCreationDatetime"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
+        <ObjectProperty IRI="#hasEmail"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
+        <ObjectProperty IRI="#hasEntryMethod"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
+        <ObjectProperty IRI="#hasPhone"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
+        <ObjectProperty IRI="#hasRole"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
+        <ObjectProperty IRI="#hasUtilizationQuantity"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
+        <ObjectProperty IRI="#hasValue"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
+        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#avaliatedBy"/>
         <ObjectProperty IRI="#isAvaliateA"/>
@@ -1747,6 +1913,22 @@
         <ObjectProperty IRI="#utilizesResource"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
+        <Class IRI="#Church"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
+        <Class IRI="#ChurchNotification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
+        <Class IRI="#ResourceUtilization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#avaliatedBy"/>
         <Class IRI="#Resource"/>
     </ObjectPropertyDomain>
@@ -1765,13 +1947,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCreationDatetime"/>
         <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDatetime"/>
-        <ObjectUnionOf>
-            <Class IRI="#ChurchNotification"/>
-            <Class IRI="#ResourceUtilization"/>
-        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEmail"/>
@@ -1818,6 +1993,22 @@
         <Class IRI="#Resource"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
+        <Class IRI="#ChurchNotification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
+        <Class IRI="#Datetime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
+        <Class IRI="#Datetime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
+        <Class IRI="#ChurchNotification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#avaliatedBy"/>
         <Class IRI="#Avaliation"/>
     </ObjectPropertyRange>
@@ -1836,10 +2027,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCreationDatetime"/>
         <Class IRI="#CreationDatetime"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDatetime"/>
-        <Class IRI="#Datetime"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEmail"/>
@@ -1879,7 +2066,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#resourceUtilizatedBy"/>
-        <Class IRI="#Avaliation"/>
+        <Class IRI="#ResourceUtilization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#usedBy"/>
