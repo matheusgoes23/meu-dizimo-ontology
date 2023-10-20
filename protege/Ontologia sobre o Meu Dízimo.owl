@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://meudizimo.com/ontology"
+     xml:base="http://example.com"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://meudizimo.com/ontology">
+     ontologyIRI="http://example.com">
     <Prefix name="" IRI="http://example.com#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -13,15 +13,6 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class IRI="http://meudizimo.com#LeaderRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://meudizimo.com#MemberRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://meudizimo.com#SecretaryRole"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#Avaliation"/>
     </Declaration>
@@ -50,12 +41,6 @@
         <Class IRI="#EntryMethod"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FiveStarAvaliation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FourStarAvaliation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FreeResource"/>
     </Declaration>
     <Declaration>
@@ -69,9 +54,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#MemberRecommendation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OneStarAvaliation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Other"/>
@@ -92,16 +74,7 @@
         <Class IRI="#ResourceUtilization"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Role"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Secretary"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ThreeStarAvaliation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TwoStarAvaliation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#User"/>
@@ -110,10 +83,13 @@
         <Class IRI="#UtilizationQuantity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Value"/>
+        <Class abbreviatedIRI="gufo:Category"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="gufo:Event"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:EventType"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="gufo:FunctionalComplex"/>
@@ -122,76 +98,31 @@
         <Class abbreviatedIRI="gufo:IntrinsicMode"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="gufo:Kind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="gufo:Quality"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="gufo:Relator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
+        <Class abbreviatedIRI="gufo:Role"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#avaliatedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAffiliate"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAvaliation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
+        <Class abbreviatedIRI="gufo:SubKind"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCPF"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCreationDatetime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDatetime"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEmail"/>
@@ -203,97 +134,58 @@
         <ObjectProperty IRI="#hasPhone"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasResourceRating"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasResourceUtilization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasRole"/>
+        <ObjectProperty IRI="#hasRating"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasUtilizationQuantity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasValue"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#isAffiliate"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isAvaliateA"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isAvaliatedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isResourceRatingOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#resourceUtilizatedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#usedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#utilizesResource"/>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#valueEqual"/>
+        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Avaliation1"/>
+        <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Avaliation2"/>
+        <NamedIndividual IRI="#Avaliation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Avaliation3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Avaliation4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Avaliation5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Avaliation6"/>
+        <NamedIndividual IRI="#CPF"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Campaign"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChurchNotification1"/>
+        <NamedIndividual IRI="#Church"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChurchNotification2"/>
+        <NamedIndividual IRI="#ChurchNotification"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChurchNotification3"/>
+        <NamedIndividual IRI="#CreationDatetime"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChurchNotification4"/>
+        <NamedIndividual IRI="#Datetime"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#FiveStar"/>
+        <NamedIndividual IRI="#Email"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#FourStar"/>
+        <NamedIndividual IRI="#EntryMethod"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Igreja_X"/>
+        <NamedIndividual IRI="#FreeResource"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Leader"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Leader1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LeaderRecommendation"/>
@@ -302,412 +194,58 @@
         <NamedIndividual IRI="#Member"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Member1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Member2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Member3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Member4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Member5"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#MemberRecommendation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#OneStar"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Other"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Resource1"/>
+        <NamedIndividual IRI="#Phone"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Resource2"/>
+        <NamedIndividual IRI="#PremiumResource"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Resource3"/>
+        <NamedIndividual IRI="#Rating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ResourceUtilization"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Secretary"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Secretary1"/>
+        <NamedIndividual IRI="#User"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Secretary2"/>
+        <NamedIndividual IRI="#UtilizationQuantity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThreeStar"/>
+        <NamedIndividual IRI="#isAffiliate"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#TwoStar"/>
+        <NamedIndividual IRI="#usedBy"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#0.0"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#00000000000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#10.0"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#11111111111"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2023-10-14_01:00:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2023-10-14_02:00:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2023-10-14_03:00:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#22222222222"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#33333333333"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#44444444444"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#55555555555"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#66666666666"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#77777777777"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84900000000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84911111111"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84922222222"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84933333333"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84944444444"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84955555555"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84966666666"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#84977777777"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#leader1@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#member1@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#member2@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#member3@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#member4@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#member5@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#secretary1@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#secretary2@meudizimo.com"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/Datetime#2023-10-16_23:59:00.000"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ChurchNotification5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/UtilzationQuantity#1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/UtilzationQuantity#2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/UtilzationQuantity#3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/UtilzationQuantity#4"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="http://meudizimo.com#LeaderRole"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Role"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-                <Class IRI="#Leader"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://meudizimo.com#MemberRole"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Role"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-                <Class IRI="#Member"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://meudizimo.com#SecretaryRole"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Role"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-                <Class IRI="#Secretary"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Campaign"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#EntryMethod"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasEntryMethod"/>
-                    <NamedIndividual IRI="#Campaign"/>
-                </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#FiveStarAvaliation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Avaliation"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAvaliationRating"/>
-                <NamedIndividual IRI="#FiveStar"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#FourStarAvaliation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Avaliation"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAvaliationRating"/>
-                <NamedIndividual IRI="#FourStar"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#FreeResource"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Resource"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasValue"/>
-                <DataHasValue>
-                    <DataProperty IRI="#valueEqual"/>
-                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
-                </DataHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Leader"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#User"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasRole"/>
-                <NamedIndividual IRI="#Leader"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LeaderRecommendation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#EntryMethod"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasEntryMethod"/>
-                    <NamedIndividual IRI="#LeaderRecommendation"/>
-                </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Member"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#User"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasRole"/>
-                <NamedIndividual IRI="#Member"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#MemberRecommendation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#EntryMethod"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasEntryMethod"/>
-                    <NamedIndividual IRI="#MemberRecommendation"/>
-                </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#OneStarAvaliation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Avaliation"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAvaliationRating"/>
-                <NamedIndividual IRI="#OneStar"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Other"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#EntryMethod"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasEntryMethod"/>
-                    <NamedIndividual IRI="#Other"/>
-                </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#PremiumResource"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Resource"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasValue"/>
-                <DataSomeValuesFrom>
-                    <DataProperty IRI="#valueEqual"/>
-                    <DatatypeRestriction>
-                        <Datatype abbreviatedIRI="xsd:double"/>
-                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
-                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
-                        </FacetRestriction>
-                    </DatatypeRestriction>
-                </DataSomeValuesFrom>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Rating"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#FiveStar"/>
-            <NamedIndividual IRI="#FourStar"/>
-            <NamedIndividual IRI="#OneStar"/>
-            <NamedIndividual IRI="#ThreeStar"/>
-            <NamedIndividual IRI="#TwoStar"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Secretary"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#User"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasRole"/>
-                <NamedIndividual IRI="#Secretary"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#ThreeStarAvaliation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Avaliation"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAvaliationRating"/>
-                <NamedIndividual IRI="#ThreeStar"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#TwoStarAvaliation"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Avaliation"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasAvaliationRating"/>
-                <NamedIndividual IRI="#TwoStar"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Avaliation"/>
         <Class abbreviatedIRI="gufo:Relator"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Avaliation"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasAvaliationRating"/>
-            <Class IRI="#Rating"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Avaliation"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#isAvaliateA"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
             <Class IRI="#Resource"/>
-        </ObjectExactCardinality>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Avaliation"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#isAvaliationOf"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
             <Class IRI="#User"/>
-        </ObjectExactCardinality>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CPF"/>
@@ -715,10 +253,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CPF"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#User"/>
-        </ObjectExactCardinality>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Campaign"/>
+        <Class IRI="#EntryMethod"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Church"/>
@@ -730,33 +272,39 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChurchNotification"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
+            </ObjectInverseOf>
             <Class IRI="#User"/>
-        </ObjectMinCardinality>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChurchNotification"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-            <Class IRI="#Church"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ChurchNotification"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#Datetime"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ChurchNotification"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Church"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CreationDatetime"/>
         <Class abbreviatedIRI="gufo:Quality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CreationDatetime"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#User"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -765,28 +313,15 @@
         <Class abbreviatedIRI="gufo:Quality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Datetime"/>
-        <ObjectUnionOf>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
-                <Class IRI="#ChurchNotification"/>
-            </ObjectMinCardinality>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
-                <Class IRI="#ResourceUtilization"/>
-            </ObjectMinCardinality>
-        </ObjectUnionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Email"/>
         <Class abbreviatedIRI="gufo:Quality"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Email"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#User"/>
-        </ObjectExactCardinality>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EntryMethod"/>
@@ -795,9 +330,33 @@
     <SubClassOf>
         <Class IRI="#EntryMethod"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#User"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FreeResource"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leader"/>
+        <Class IRI="#User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeaderRecommendation"/>
+        <Class IRI="#EntryMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Member"/>
+        <Class IRI="#User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MemberRecommendation"/>
+        <Class IRI="#EntryMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Other"/>
+        <Class IRI="#EntryMethod"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Phone"/>
@@ -806,9 +365,13 @@
     <SubClassOf>
         <Class IRI="#Phone"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#User"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PremiumResource"/>
+        <Class IRI="#Resource"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rating"/>
@@ -817,7 +380,7 @@
     <SubClassOf>
         <Class IRI="#Rating"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#isAvaliatedBy"/>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#Resource"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -828,36 +391,35 @@
     <SubClassOf>
         <Class IRI="#Resource"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#avaliatedBy"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
             <Class IRI="#Avaliation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Resource"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#resourceUtilizatedBy"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
             <Class IRI="#ResourceUtilization"/>
-        </ObjectSomeValuesFrom>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Resource"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasResourceRating"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#Rating"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Resource"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasUtilizationQuantity"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#UtilizationQuantity"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Resource"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasValue"/>
-            <Class IRI="#Value"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -866,35 +428,34 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ResourceUtilization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#User"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResourceUtilization"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#Datetime"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ResourceUtilization"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#isResourceUtilizationOf"/>
-            <Class IRI="#User"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ResourceUtilization"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#utilizesResource"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
+            </ObjectInverseOf>
             <Class IRI="#Resource"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Role"/>
-        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Role"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-            <Class IRI="#User"/>
-        </ObjectMinCardinality>
+        <Class IRI="#Secretary"/>
+        <Class IRI="#User"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
@@ -903,56 +464,61 @@
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasAvaliation"/>
-            <Class IRI="#Avaliation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasResourceUtilization"/>
+            <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
             <Class IRI="#ResourceUtilization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasRole"/>
-            <Class IRI="#Role"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isAffiliate"/>
-            <Class IRI="#Church"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Avaliation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasCPF"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#CPF"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasCreationDatetime"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#CreationDatetime"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasEmail"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#Email"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasPhone"/>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#EntryMethod"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
             <Class IRI="#Phone"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -963,1071 +529,120 @@
     <SubClassOf>
         <Class IRI="#UtilizationQuantity"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
             <Class IRI="#Resource"/>
         </ObjectMinCardinality>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Value"/>
-        <Class abbreviatedIRI="gufo:Quality"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Value"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
-            <Class IRI="#Resource"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#Campaign"/>
-        <Class IRI="#LeaderRecommendation"/>
-        <Class IRI="#MemberRecommendation"/>
-        <Class IRI="#Other"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#FiveStarAvaliation"/>
-        <Class IRI="#FourStarAvaliation"/>
-        <Class IRI="#OneStarAvaliation"/>
-        <Class IRI="#ThreeStarAvaliation"/>
-        <Class IRI="#TwoStarAvaliation"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#FreeResource"/>
-        <Class IRI="#PremiumResource"/>
-    </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="#Avaliation"/>
-        <NamedIndividual IRI="#Avaliation1"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Avaliation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Avaliation"/>
-        <NamedIndividual IRI="#Avaliation2"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#CPF"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Avaliation"/>
-        <NamedIndividual IRI="#Avaliation3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Avaliation"/>
-        <NamedIndividual IRI="#Avaliation4"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Avaliation"/>
-        <NamedIndividual IRI="#Avaliation5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Avaliation"/>
-        <NamedIndividual IRI="#Avaliation6"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#EntryMethod"/>
+        <Class abbreviatedIRI="gufo:SubKind"/>
         <NamedIndividual IRI="#Campaign"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ChurchNotification"/>
-        <NamedIndividual IRI="#ChurchNotification1"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Church"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ChurchNotification"/>
-        <NamedIndividual IRI="#ChurchNotification2"/>
+        <Class abbreviatedIRI="gufo:EventType"/>
+        <NamedIndividual IRI="#ChurchNotification"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ChurchNotification"/>
-        <NamedIndividual IRI="#ChurchNotification3"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#CreationDatetime"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ChurchNotification"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Datetime"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Rating"/>
-        <NamedIndividual IRI="#FiveStar"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Email"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Rating"/>
-        <NamedIndividual IRI="#FourStar"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#EntryMethod"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Church"/>
-        <NamedIndividual IRI="#Igreja_X"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#FreeResource"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="gufo:Role"/>
         <NamedIndividual IRI="#Leader"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Leader1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#EntryMethod"/>
+        <Class abbreviatedIRI="gufo:SubKind"/>
         <NamedIndividual IRI="#LeaderRecommendation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="gufo:Role"/>
         <NamedIndividual IRI="#Member"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Member3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Member4"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Member5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#EntryMethod"/>
+        <Class abbreviatedIRI="gufo:SubKind"/>
         <NamedIndividual IRI="#MemberRecommendation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Rating"/>
-        <NamedIndividual IRI="#OneStar"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#EntryMethod"/>
+        <Class abbreviatedIRI="gufo:SubKind"/>
         <NamedIndividual IRI="#Other"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Resource"/>
-        <NamedIndividual IRI="#Resource1"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Phone"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Resource"/>
-        <NamedIndividual IRI="#Resource2"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#PremiumResource"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Resource"/>
-        <NamedIndividual IRI="#Resource3"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Rating"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="gufo:Category"/>
+        <NamedIndividual IRI="#Resource"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:EventType"/>
+        <NamedIndividual IRI="#ResourceUtilization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
         <NamedIndividual IRI="#Secretary"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Secretary1"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#User"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Secretary2"/>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#UtilizationQuantity"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Rating"/>
-        <NamedIndividual IRI="#ThreeStar"/>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#isAffiliate"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Rating"/>
-        <NamedIndividual IRI="#TwoStar"/>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#usedBy"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Value"/>
-        <NamedIndividual IRI="#0.0"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#00000000000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Value"/>
-        <NamedIndividual IRI="#10.0"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#11111111111"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CreationDatetime"/>
-        <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CreationDatetime"/>
-        <NamedIndividual IRI="#2023-10-14_01:00:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CreationDatetime"/>
-        <NamedIndividual IRI="#2023-10-14_02:00:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CreationDatetime"/>
-        <NamedIndividual IRI="#2023-10-14_03:00:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#22222222222"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#33333333333"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#44444444444"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#55555555555"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#66666666666"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CPF"/>
-        <NamedIndividual IRI="#77777777777"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84900000000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84911111111"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84922222222"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84933333333"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84944444444"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84955555555"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84966666666"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Phone"/>
-        <NamedIndividual IRI="#84977777777"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#leader1@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#member1@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#member2@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#member3@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#member4@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#member5@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#secretary1@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Email"/>
-        <NamedIndividual IRI="#secretary2@meudizimo.com"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Datetime"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Datetime"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Datetime"/>
-        <NamedIndividual IRI="/Datetime#2023-10-16_23:59:00.000"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ChurchNotification"/>
-        <NamedIndividual IRI="/ResourceUtilization#ChurchNotification5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ResourceUtilization"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ResourceUtilization"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ResourceUtilization"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ResourceUtilization"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization4"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ResourceUtilization"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ResourceUtilization"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization6"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UtilizationQuantity"/>
-        <NamedIndividual IRI="/UtilzationQuantity#1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UtilizationQuantity"/>
-        <NamedIndividual IRI="/UtilzationQuantity#2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UtilizationQuantity"/>
-        <NamedIndividual IRI="/UtilzationQuantity#3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UtilizationQuantity"/>
-        <NamedIndividual IRI="/UtilzationQuantity#4"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <NamedIndividual IRI="#Avaliation1"/>
-        <NamedIndividual IRI="#FiveStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <NamedIndividual IRI="#Avaliation1"/>
-        <NamedIndividual IRI="#Resource1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <NamedIndividual IRI="#Avaliation1"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <NamedIndividual IRI="#Avaliation2"/>
-        <NamedIndividual IRI="#FourStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <NamedIndividual IRI="#Avaliation2"/>
-        <NamedIndividual IRI="#Resource2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <NamedIndividual IRI="#Avaliation2"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <NamedIndividual IRI="#Avaliation3"/>
-        <NamedIndividual IRI="#FourStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <NamedIndividual IRI="#Avaliation3"/>
-        <NamedIndividual IRI="#Resource2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <NamedIndividual IRI="#Avaliation3"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <NamedIndividual IRI="#Avaliation4"/>
-        <NamedIndividual IRI="#ThreeStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <NamedIndividual IRI="#Avaliation4"/>
-        <NamedIndividual IRI="#Resource3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <NamedIndividual IRI="#Avaliation4"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <NamedIndividual IRI="#Avaliation5"/>
-        <NamedIndividual IRI="#ThreeStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <NamedIndividual IRI="#Avaliation5"/>
-        <NamedIndividual IRI="#Resource3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <NamedIndividual IRI="#Avaliation5"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <NamedIndividual IRI="#Avaliation6"/>
-        <NamedIndividual IRI="#FourStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <NamedIndividual IRI="#Avaliation6"/>
-        <NamedIndividual IRI="#Resource3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <NamedIndividual IRI="#Avaliation6"/>
-        <NamedIndividual IRI="#Member3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-        <NamedIndividual IRI="#ChurchNotification1"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <NamedIndividual IRI="#ChurchNotification1"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification1"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-        <NamedIndividual IRI="#ChurchNotification2"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <NamedIndividual IRI="#ChurchNotification2"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification2"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification2"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-        <NamedIndividual IRI="#ChurchNotification3"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <NamedIndividual IRI="#ChurchNotification3"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification3"/>
-        <NamedIndividual IRI="#Member3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification3"/>
-        <NamedIndividual IRI="#Member4"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="#Member3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="#Member4"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="#ChurchNotification4"/>
-        <NamedIndividual IRI="#Member5"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Leader1"/>
-        <NamedIndividual IRI="#00000000000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Leader1"/>
-        <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Leader1"/>
-        <NamedIndividual IRI="#leader1@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Leader1"/>
-        <NamedIndividual IRI="#84900000000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Leader1"/>
-        <NamedIndividual IRI="#Leader"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Leader1"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#33333333333"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#member1@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#LeaderRecommendation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#84933333333"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#Member"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Member1"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#44444444444"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#2023-10-14_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#member2@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#MemberRecommendation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#84944444444"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#Member"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Member2"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#55555555555"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#2023-10-14_02:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#member3@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#Campaign"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#84955555555"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#Member"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Member3"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#66666666666"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#2023-10-14_03:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#member4@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#Other"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#84966666666"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#Member"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Member4"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#77777777777"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#2023-10-14_02:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#member5@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#LeaderRecommendation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#84944444444"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#Member"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Member5"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasResourceRating"/>
-        <NamedIndividual IRI="#Resource1"/>
-        <NamedIndividual IRI="#FiveStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasUtilizationQuantity"/>
-        <NamedIndividual IRI="#Resource1"/>
-        <NamedIndividual IRI="/UtilzationQuantity#1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Resource1"/>
-        <NamedIndividual IRI="#0.0"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usedBy"/>
-        <NamedIndividual IRI="#Resource1"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasResourceRating"/>
-        <NamedIndividual IRI="#Resource2"/>
-        <NamedIndividual IRI="#FourStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasUtilizationQuantity"/>
-        <NamedIndividual IRI="#Resource2"/>
-        <NamedIndividual IRI="/UtilzationQuantity#2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Resource2"/>
-        <NamedIndividual IRI="#0.0"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usedBy"/>
-        <NamedIndividual IRI="#Resource2"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usedBy"/>
-        <NamedIndividual IRI="#Resource2"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasResourceRating"/>
-        <NamedIndividual IRI="#Resource3"/>
-        <NamedIndividual IRI="#ThreeStar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasUtilizationQuantity"/>
-        <NamedIndividual IRI="#Resource3"/>
-        <NamedIndividual IRI="/UtilzationQuantity#3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Resource3"/>
-        <NamedIndividual IRI="#10.0"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usedBy"/>
-        <NamedIndividual IRI="#Resource3"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usedBy"/>
-        <NamedIndividual IRI="#Resource3"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usedBy"/>
-        <NamedIndividual IRI="#Resource3"/>
-        <NamedIndividual IRI="#Member3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Secretary1"/>
-        <NamedIndividual IRI="#11111111111"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Secretary1"/>
-        <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Secretary1"/>
-        <NamedIndividual IRI="#secretary1@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Secretary1"/>
-        <NamedIndividual IRI="#84911111111"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Secretary1"/>
-        <NamedIndividual IRI="#Secretary"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Secretary1"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCPF"/>
-        <NamedIndividual IRI="#Secretary2"/>
-        <NamedIndividual IRI="#22222222222"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <NamedIndividual IRI="#Secretary2"/>
-        <NamedIndividual IRI="#2023-10-14_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Secretary2"/>
-        <NamedIndividual IRI="#secretary2@meudizimo.com"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPhone"/>
-        <NamedIndividual IRI="#Secretary2"/>
-        <NamedIndividual IRI="#84922222222"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRole"/>
-        <NamedIndividual IRI="#Secretary2"/>
-        <NamedIndividual IRI="#Secretary"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <NamedIndividual IRI="#Secretary2"/>
-        <NamedIndividual IRI="#Igreja_X"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ChurchNotification5"/>
-        <NamedIndividual IRI="/Datetime#2023-10-16_23:59:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="/ResourceUtilization#ChurchNotification5"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <NamedIndividual IRI="/ResourceUtilization#ChurchNotification5"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization1"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization1"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization1"/>
-        <NamedIndividual IRI="#Resource1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization2"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization2"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization2"/>
-        <NamedIndividual IRI="#Resource2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization3"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization3"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization3"/>
-        <NamedIndividual IRI="#Resource2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization4"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization4"/>
-        <NamedIndividual IRI="#Member1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization4"/>
-        <NamedIndividual IRI="#Resource3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization5"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_01:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization5"/>
-        <NamedIndividual IRI="#Member2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization5"/>
-        <NamedIndividual IRI="#Resource3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization6"/>
-        <NamedIndividual IRI="/Datetime#2023-10-15_00:00:00.000"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization6"/>
-        <NamedIndividual IRI="#Member3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <NamedIndividual IRI="/ResourceUtilization#ResourceUtilization6"/>
-        <NamedIndividual IRI="#Resource3"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#valueEqual"/>
-        <NamedIndividual IRI="#0.0"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#valueEqual"/>
-        <NamedIndividual IRI="#10.0"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">10.0</Literal>
-    </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#avaliatedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasAffiliate"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasAvaliation"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCPF"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCreationDatetime"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDatetime"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -2043,305 +658,228 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasResourceRating"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasResourceUtilization"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasRole"/>
+        <ObjectProperty IRI="#hasRating"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasUtilizationQuantity"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasValue"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#isAffiliate"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isAvaliateA"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isAvaliatedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isResourceRatingOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#resourceUtilizatedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#usedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#utilizesResource"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#createdByChurchNotificationOf"/>
-        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <ObjectProperty IRI="http://meudizimo.com#isChurchNotificationDatetimeOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <ObjectProperty IRI="http://meudizimo.com#isResourceUtilizationDatetimeOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isCPFOf"/>
-        <ObjectProperty IRI="#hasCPF"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isCreationDatetimeOf"/>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isEmailOf"/>
-        <ObjectProperty IRI="#hasEmail"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isEntryMethodOf"/>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isPhoneOf"/>
-        <ObjectProperty IRI="#hasPhone"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isRoleOf"/>
-        <ObjectProperty IRI="#hasRole"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isUtilizationQuantityOf"/>
-        <ObjectProperty IRI="#hasUtilizationQuantity"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#isValueOf"/>
-        <ObjectProperty IRI="#hasValue"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
-        <ObjectProperty IRI="http://meudizimo.com#sendsChurchNotificationTo"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#avaliatedBy"/>
-        <ObjectProperty IRI="#isAvaliateA"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasAffiliate"/>
-        <ObjectProperty IRI="#isAffiliate"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasAvaliation"/>
-        <ObjectProperty IRI="#isAvaliationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <ObjectProperty IRI="#isAvaliatedBy"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasResourceRating"/>
-        <ObjectProperty IRI="#isResourceRatingOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasResourceUtilization"/>
-        <ObjectProperty IRI="#isResourceUtilizationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#resourceUtilizatedBy"/>
-        <ObjectProperty IRI="#utilizesResource"/>
-    </InverseObjectProperties>
+    </FunctionalObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
-        <Class IRI="#Church"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <Class IRI="#ChurchNotification"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <Class IRI="#ResourceUtilization"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#avaliatedBy"/>
-        <Class IRI="#Resource"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAvaliation"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <Class IRI="#Avaliation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCPF"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCreationDatetime"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasEmail"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasEntryMethod"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPhone"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasResourceRating"/>
-        <Class IRI="#Resource"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasResourceUtilization"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasRole"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasUtilizationQuantity"/>
-        <Class IRI="#Resource"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasValue"/>
-        <Class IRI="#Resource"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isAffiliate"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#resourceUtilizatedBy"/>
-        <Class IRI="#Resource"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#usedBy"/>
-        <Class IRI="#Resource"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://meudizimo.com#createsChurchNotification"/>
-        <Class IRI="#ChurchNotification"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://meudizimo.com#hasChurchNotificationDatetime"/>
-        <Class IRI="#Datetime"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://meudizimo.com#hasResourceUtilizationDatetime"/>
-        <Class IRI="#Datetime"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://meudizimo.com#receivesChurchNotification"/>
-        <Class IRI="#ChurchNotification"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#avaliatedBy"/>
-        <Class IRI="#Avaliation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAvaliation"/>
-        <Class IRI="#Avaliation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAvaliationRating"/>
-        <Class IRI="#Rating"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCPF"/>
         <Class IRI="#CPF"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCreationDatetime"/>
         <Class IRI="#CreationDatetime"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDatetime"/>
+        <Class IRI="#Datetime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEmail"/>
         <Class IRI="#Email"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEntryMethod"/>
         <Class IRI="#EntryMethod"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhone"/>
         <Class IRI="#Phone"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasResourceRating"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRating"/>
         <Class IRI="#Rating"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUtilizationQuantity"/>
+        <Class IRI="#UtilizationQuantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAffiliate"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usedBy"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCPF"/>
+        <Class IRI="#User"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasResourceUtilization"/>
+        <ObjectProperty IRI="#hasCreationDatetime"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDatetime"/>
+        <Class IRI="#ChurchNotification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDatetime"/>
         <Class IRI="#ResourceUtilization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasRole"/>
-        <Class IRI="#Role"/>
+        <ObjectProperty IRI="#hasEmail"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEntryMethod"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPhone"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRating"/>
+        <Class IRI="#Resource"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasUtilizationQuantity"/>
-        <Class IRI="#UtilizationQuantity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasValue"/>
-        <Class IRI="#Value"/>
+        <Class IRI="#Resource"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isAffiliate"/>
         <Class IRI="#Church"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#resourceUtilizatedBy"/>
-        <Class IRI="#ResourceUtilization"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#usedBy"/>
         <Class IRI="#User"/>
     </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="#valueEqual"/>
-        <Class IRI="#Value"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#valueEqual"/>
-        <Datatype abbreviatedIRI="xsd:double"/>
-    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Avaliation</IRI>
+        <Literal xml:lang="en">Avaliation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CPF</IRI>
+        <Literal xml:lang="en">CPF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Campaign</IRI>
+        <Literal xml:lang="en">Campaign</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Church</IRI>
+        <Literal xml:lang="en">Church</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ChurchNotification</IRI>
+        <Literal xml:lang="en">ChurchNotification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CreationDatetime</IRI>
+        <Literal xml:lang="en">CreationDatetime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Datetime</IRI>
+        <Literal xml:lang="en">Datetime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Email</IRI>
+        <Literal xml:lang="en">Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EntryMethod</IRI>
+        <Literal xml:lang="en">EntryMethod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FreeResource</IRI>
+        <Literal xml:lang="en">FreeResource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Leader</IRI>
+        <Literal xml:lang="en">Leader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LeaderRecommendation</IRI>
+        <Literal xml:lang="en">LeaderRecommendation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Member</IRI>
+        <Literal xml:lang="en">Member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MemberRecommendation</IRI>
+        <Literal xml:lang="en">MemberRecommendation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Other</IRI>
+        <Literal xml:lang="en">Other</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Phone</IRI>
+        <Literal xml:lang="en">Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PremiumResource</IRI>
+        <Literal xml:lang="en">PremiumResource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rating</IRI>
+        <Literal xml:lang="en">Rating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Resource</IRI>
+        <Literal xml:lang="en">Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ResourceUtilization</IRI>
+        <Literal xml:lang="en">ResourceUtilization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Secretary</IRI>
+        <Literal xml:lang="en">Secretary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#User</IRI>
+        <Literal xml:lang="en">User</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UtilizationQuantity</IRI>
+        <Literal xml:lang="en">UtilizationQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAffiliate</IRI>
+        <Literal xml:lang="en">isAffiliate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#usedBy</IRI>
+        <Literal xml:lang="en">usedBy</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 

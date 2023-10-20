@@ -71,14 +71,8 @@
     rdfs:subClassOf gufo:Quality;
     rdfs:label "Value"@en.
 :Role rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
-    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:subClassOf gufo:Quality;
     rdfs:label "Role"@en.
-:LeaderRole rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
-    rdfs:label "LeaderRole"@en.
-:SecretaryRole rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
-    rdfs:label "SecretaryRole"@en.
-:MemberRole rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
-    rdfs:label "MemberRole"@en.
 :Member rdfs:subClassOf :User.
 :Leader rdfs:subClassOf :User.
 :Secretary rdfs:subClassOf :User.
@@ -88,9 +82,6 @@
 :MemberRecommendation rdfs:subClassOf :EntryMethod.
 :Campaign rdfs:subClassOf :EntryMethod.
 :Other rdfs:subClassOf :EntryMethod.
-:LeaderRole rdfs:subClassOf :Role.
-:SecretaryRole rdfs:subClassOf :Role.
-:MemberRole rdfs:subClassOf :Role.
 :usedBy rdf:type owl:ObjectProperty;
     rdfs:domain :Resource;
     rdfs:range :User;
@@ -192,7 +183,8 @@
 :Resource rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:participatedIn;
-  owl:someValuesFrom :ResourceUtilization
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :ResourceUtilization
 ].
 :ResourceUtilization rdfs:subClassOf [
   rdf:type owl:Restriction;
@@ -272,16 +264,4 @@
   owl:onProperty gufo:inheresIn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :User
-].
-:Avaliation rdfs:subClassOf [
-  rdf:type owl:Restriction;
-  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
-  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :Rating
-].
-:Rating rdfs:subClassOf [
-  rdf:type owl:Restriction;
-  owl:onProperty gufo:inheresIn;
-  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :Avaliation
 ].
